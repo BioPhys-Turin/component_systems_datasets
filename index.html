@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Component Systems Datasets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #F7F6F2;
+      --ink:      #1A1A18;
+      --mid:      #7A7A72;
+      --rule:     #D4D2CC;
+      --accent:   #1A1A18;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 0 1.5rem;
+    }
+
+    /* ── Layout ── */
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 5rem 0 6rem;
+    }
+
+    /* ── Header ── */
+    header {
+      border-top: 2px solid var(--ink);
+      padding-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 300;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.6rem;
+    }
+
+    .description {
+      font-size: 1.05rem;
+      color: var(--mid);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 3rem 0;
+    }
+
+    /* ── Datasets section ── */
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 1.6rem;
+    }
+
+    /* ── Ongoing card ── */
+    .card-ongoing {
+      border: 1px solid var(--rule);
+      padding: 1.6rem 1.8rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.4rem;
+    }
+
+    .pill {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: var(--bg);
+      padding: 0.25rem 0.55rem;
+      white-space: nowrap;
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+    }
+
+    .card-body h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-body p {
+      font-size: 0.9rem;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 5rem;
+      border-top: 1px solid var(--rule);
+      padding-top: 1.4rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--mid);
+      letter-spacing: 0.06em;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <p class="label">Open Research Data</p>
+      <h1>Component Systems<br>Datasets</h1>
+      <p class="description">
+        A curated collection of component system matrices — structured as
+        realizations × components — made freely available for research,
+        benchmarking, and reproducibility.
+      </p>
+    </header>
+
+    <hr />
+
+    <p class="section-label">Datasets</p>
+
+    <div class="card-ongoing">
+      <span class="pill">Ongoing</span>
+      <div class="card-body">
+        <h2>Dataset Name — v0.1</h2>
+        <p>
+          Brief description of what this dataset contains, its dimensions,
+          source, and intended use. Data collection is in progress;
+          updates are released incrementally.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      Last updated — June 2026
+    </footer>
+
+  </div>
+</body>
+</html>
