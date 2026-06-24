@@ -130,6 +130,8 @@
       text-decoration: none;
       border: 1px solid var(--ink);
       padding: 0.4rem 0.8rem;
+      background: none;
+      cursor: pointer;
       transition: background 0.15s, color 0.15s;
     }
 
@@ -157,7 +159,9 @@
       <p class="label">Open Research Data</p>
       <h1>Component Systems<br>Datasets</h1>
       <p class="description">
-        A curated collection of component systems made freely available for research.
+        A curated collection of component system matrices — structured as
+        realizations × components — made freely available for research,
+        benchmarking, and reproducibility.
       </p>
     </header>
 
@@ -170,13 +174,14 @@
       <div class="card-body">
         <h2>Dataset Name — v0.1</h2>
         <p>
-          A test component system
+          Brief description of what this dataset contains, its dimensions,
+          source, and intended use. Data collection is in progress;
+          updates are released incrementally.
         </p>
-        <a class="btn-download"
-           href="https://raw.githubusercontent.com/BioPhys-Turin/component_systems_datasets/main/test.tsv"
-           download>
-          ↓ Download CSV
-        </a>
+        <button class="btn-download"
+           onclick="downloadFile('https://raw.githubusercontent.com/BioPhys-Turin/component_systems_datasets/main/test.tsv', 'test.tsv')">
+          ↓ Download TSV
+        </button>
       </div>
     </div>
 
@@ -185,5 +190,16 @@
     </footer>
 
   </div>
+  <script>
+    async function downloadFile(url, filename) {
+      const res = await fetch(url);
+      const blob = await res.blob();
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+  </script>
 </body>
 </html>
