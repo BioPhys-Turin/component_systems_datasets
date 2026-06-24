@@ -117,6 +117,25 @@
       font-size: 0.9rem;
       color: var(--mid);
       line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .btn-download {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--ink);
+      padding: 0.4rem 0.8rem;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .btn-download:hover {
+      background: var(--ink);
+      color: var(--bg);
     }
 
     /* ── Footer ── */
@@ -138,9 +157,7 @@
       <p class="label">Open Research Data</p>
       <h1>Component Systems<br>Datasets</h1>
       <p class="description">
-        A curated collection of component system matrices — structured as
-        realizations × components — made freely available for research,
-        benchmarking, and reproducibility.
+        A curated collection of component systems made freely available for research.
       </p>
     </header>
 
@@ -153,10 +170,13 @@
       <div class="card-body">
         <h2>Dataset Name — v0.1</h2>
         <p>
-          Brief description of what this dataset contains, its dimensions,
-          source, and intended use. Data collection is in progress;
-          updates are released incrementally.
+          A test component system
         </p>
+        <a class="btn-download"
+           href="https://github.com/BioPhys-Turin/component_systems_datasets/blob/main/test.tsv"
+           download>
+          ↓ Download CSV
+        </a>
       </div>
     </div>
 
